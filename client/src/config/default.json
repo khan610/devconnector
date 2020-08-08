@@ -1,3 +1,4 @@
 {
-    "mongoURI": "mongodb+srv: //khan610:<feon12345>@cluster0.vgjya.mongodb.net/<dbname>?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv: //khan610:<feon12345>@cluster0.vgjya.mongodb.net/<dbname>?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken"
 }
