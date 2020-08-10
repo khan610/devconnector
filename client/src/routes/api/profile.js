@@ -9,13 +9,12 @@ const User = require('../../models/User');
 // @desc    Get current users profile
 // @acess   Private
 router.get('/', auth, async (req, res) => {
-    try {
-        const profile = await
-    } catch(err) {
-        console.error(err.message);
-        res.status(500).send('Server Error');
-    }
+  try {
+    const profile = await Profile.findOne({ user: req.user.id });
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
 });
-
 
 module.exports = router;
