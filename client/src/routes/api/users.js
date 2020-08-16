@@ -25,7 +25,6 @@ router.post(
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
-      console.log(res);
     }
 
     const { name, email, password } = req.body;
@@ -37,6 +36,7 @@ router.post(
         return res
           .status(400)
           .json({ errors: [{ msg: 'User already exists' }] });
+        console.log(status);
       }
 
       const avatar = gravatar.url(email, {
